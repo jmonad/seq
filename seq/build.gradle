@@ -1,6 +1,8 @@
 apply plugin: 'java'
 apply plugin: 'checkstyle'
 
+version = '0.2'
+
 dependencies {
   testCompile 'junit:junit:4.12'
 }
