@@ -56,4 +56,4 @@ SOFTWARE.
 
 [10]: https://github.com/haskellcamargo
 [11]: https://github.com/ppamorim
-[12]: https://github.com/Falkirks
+[12]: https://github.com/vitorprado
