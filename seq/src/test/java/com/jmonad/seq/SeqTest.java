@@ -18,7 +18,7 @@ public class SeqTest {
   @Test public void executeArrayZeroToBigNumberTest() {
 
     ArrayList<Integer> integers = new ArrayList<Integer>(100000);
-    for(int i = 0; i <= 1000000; i++) {
+    for (int i = 0; i <= 1000000; i++) {
       integers.add(i);
     }
 
@@ -41,10 +41,13 @@ public class SeqTest {
     long endTimeSecondRun = System.nanoTime();
 
     long durationOne = (endTimeFirstRun - startTime);
-    long durationSecond = (endTimeSecondRun - startTime)/10000000;
+    long durationSecond = (endTimeSecondRun - startTime) / 10000000;
 
-    slf4jLogger.info("Result one: " + durationOne +
-        " nanosecond(s), Result two:" + durationSecond + "milisecond(s)");
+    slf4jLogger.info("Result one: "
+        + durationOne
+        + " nanosecond(s), Result two:"
+        + durationSecond
+        + "milisecond(s)");
   }
 
 }
