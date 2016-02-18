@@ -1,5 +1,7 @@
 # Seq
 
+[![Build Status](https://travis-ci.org/jmonad/seq.svg?branch=master)](https://travis-ci.org/jmonad/seq)
+
 Import dependency
 --------------------------------
 
