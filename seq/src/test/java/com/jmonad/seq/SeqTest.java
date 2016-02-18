@@ -1,7 +1,5 @@
 package com.jmonad.seq;
 
-import com.jmonad.seq.lambda.Function;
-import java.util.ArrayList;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
