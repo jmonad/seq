@@ -14,7 +14,7 @@ public class Seq<T> implements Comparable<Seq<T>>, Iterable<T> {
 
   @SafeVarargs
   public Seq(T... params) {
-    this.list = new ArrayList(params.size);
+    this.list = new ArrayList(params.length);
     Collections.addAll(this.list, params);
   }
 
