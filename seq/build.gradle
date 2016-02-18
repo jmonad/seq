@@ -8,3 +8,8 @@ dependencies {
 checkstyle {
     configFile file('../config/checkstyle/checkstyle.xml')
 }
+
+compileJava {
+    sourceCompatibility = 1.7
+    targetCompatibility = 1.7
+}
