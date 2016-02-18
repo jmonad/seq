@@ -1,4 +1,4 @@
-package com.jmonad;
+package com.jmonad.seq;
 
 import com.jmonad.seq.Seq;
 import org.junit.Test;
