@@ -1,0 +1,14 @@
+apply plugin: 'java'
+apply plugin: 'checkstyle'
+
+dependencies {
+  testCompile 'junit:junit:4.12'
+}
+
+task checkstyle(type: Checkstyle) {
+  configFile file('../config/checkstyle/checkstyle.xml')
+  source 'src/main/java'
+  include '**/*.java'
+  exclude '**/gen/**'
+  classpath = files()
+}
