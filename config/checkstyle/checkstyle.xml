@@ -29,18 +29,15 @@
     <property name="message" value="Space needed around ':' character."/>
   </module>
 
+
   <module name="TreeWalker">
+    <property name="tabWidth" value="2"/>
 
-    <!-- Checks for Javadoc comments.                     -->
-    <!-- See http://checkstyle.sf.net/config_javadoc.html -->
-    <!--module name="JavadocMethod"/-->
-    <!--module name="JavadocType"/-->
-    <!--module name="JavadocVariable"/-->
-    <!--module name="JavadocStyle"/-->
-
-
-    <!-- Checks for Naming Conventions.                  -->
-    <!-- See http://checkstyle.sf.net/config_naming.html -->
+    <module name="Indentation">
+      <property name="basicOffset" value="2"/>
+      <property name="braceAdjustment" value="0"/>
+      <property name="caseIndent" value="2"/>
+    </module>
 
     <module name="LocalFinalVariableName"/>
     <module name="LocalVariableName"/>
