@@ -27,6 +27,9 @@ Contributors
 * [Pedro Paulo de Amorim][11]
 * [Vitor Prado][12]
 
+License
+-------
+
 ```
 The MIT License (MIT)
 
