@@ -17,8 +17,8 @@ public class SeqTest {
 
   @Test public void executeArrayZeroToBigNumberTest() {
 
-    ArrayList<Integer> integers = new ArrayList<Integer>(100000);
-    for (int i = 0; i <= 1000000; i++) {
+    ArrayList<Integer> integers = new ArrayList<Integer>(1000);
+    for (int i = 0; i <= 1000; i++) {
       integers.add(i);
     }
 
