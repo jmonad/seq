@@ -1,20 +1,20 @@
 package com.jmonad.seq;
 
+import com.jmonad.seq.lambda.Action;
+import com.jmonad.seq.lambda.BinaryFunction;
+import com.jmonad.seq.lambda.Function;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-
-import com.jmonad.seq.lambda.Action;
-import com.jmonad.seq.lambda.BinaryFunction;
-import com.jmonad.seq.lambda.Function;
 
 public class Seq<T> implements Comparable<Seq<T>>, Iterable<T> {
   private List<T> list;
 
   @SafeVarargs
   public Seq(T... params) {
-    this.list = new ArrayList<>();
+    this.list = new ArrayList();
     Collections.addAll(this.list, params);
   }
 
@@ -46,7 +46,7 @@ public class Seq<T> implements Comparable<Seq<T>>, Iterable<T> {
    * @return Seq<T>
    */
   public <Ret> Seq<Ret> map(Function<Ret, T> fn) {
-    Seq<Ret> buffer = new Seq<>();
+    Seq<Ret> buffer = new Seq();
     for (T item : this.list) {
       buffer.add(fn.call(item));
     }
@@ -59,7 +59,7 @@ public class Seq<T> implements Comparable<Seq<T>>, Iterable<T> {
    * @return Seq<T>
    */
   public Seq<T> compact() {
-    Seq<T> buffer = new Seq<>();
+    Seq<T> buffer = new Seq();
     for (T item : this.list) {
       if (item != null && !item.equals(false)) {
         buffer.add(item);
@@ -75,7 +75,7 @@ public class Seq<T> implements Comparable<Seq<T>>, Iterable<T> {
    * @return Seq<T>
    */
   public Seq<T> filter(Function<Boolean, T> fn) {
-    Seq<T> buffer = new Seq<>();
+    Seq<T> buffer = new Seq();
     for (T item : this.list) {
       if (fn.call(item)) {
         buffer.add(item);
@@ -91,7 +91,7 @@ public class Seq<T> implements Comparable<Seq<T>>, Iterable<T> {
    * @return Seq<T>
    */
   public Seq<T> reject(Function<Boolean, T> fn) {
-    Seq<T> buffer = new Seq<>();
+    Seq<T> buffer = new Seq();
     for (T item : this.list) {
       if (!fn.call(item)) {
         buffer.add(item);
@@ -107,9 +107,9 @@ public class Seq<T> implements Comparable<Seq<T>>, Iterable<T> {
    * @return Seq<Seq<T>>
    */
   public Seq<Seq<T>> partition(Function<Boolean, T> fn) {
-    Seq<Seq<T>> output = new Seq<>();
-    Seq<T> success = new Seq<>();
-    Seq<T> failure = new Seq<>();
+    Seq<Seq<T>> output = new Seq();
+    Seq<T> success = new Seq();
+    Seq<T> failure = new Seq();
 
     for (T item : this.list) {
       if (fn.call(item)) {
@@ -153,7 +153,7 @@ public class Seq<T> implements Comparable<Seq<T>>, Iterable<T> {
    * @return Seq<T>
    */
   public Seq<T> tail() {
-    return new Seq<>(this.list.subList(1, this.list.size()));
+    return new Seq(this.list.subList(1, this.list.size()));
   }
 
   /**
@@ -298,7 +298,7 @@ public class Seq<T> implements Comparable<Seq<T>>, Iterable<T> {
 
   @SafeVarargs
   public final Seq<T> difference(Seq<T>... sequences) {
-    Seq<T> buffer = new Seq<>();
+    Seq<T> buffer = new Seq();
     outer:
     for (T item : this.list) {
       for (Seq<T> seq : sequences) {
