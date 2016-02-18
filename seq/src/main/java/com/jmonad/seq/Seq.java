@@ -171,7 +171,7 @@ public class Seq<T> implements Comparable<Seq<T>>, Iterable<T> {
    */
   public Seq<T> initial() {
     int size = this.list.size();
-    return (Seq<T>) (size > 0 ? new Seq<T>(this.list.subList(0, size)) : new Seq<T>());
+    return size > 0 ? new Seq<T>(this.list.subList(0, size)) : new Seq<T>();
   }
 
   /**
