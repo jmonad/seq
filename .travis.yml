@@ -4,4 +4,4 @@ before_install:
     - chmod 755 gradlew
 
 script:
-    ./gradlew checkstyle build
+    ./gradlew check build
