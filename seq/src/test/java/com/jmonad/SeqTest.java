@@ -1,5 +1,6 @@
 package com.jmonad;
 
+import com.jmonad.seq.Seq;
 import org.junit.Test;
 
 public class SeqTest {

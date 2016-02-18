@@ -1,13 +1,13 @@
-package com.jmonad;
+package com.jmonad.seq;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-import com.jmonad.lambda.Action;
-import com.jmonad.lambda.BinaryFunction;
-import com.jmonad.lambda.Function;
+import com.jmonad.seq.lambda.Action;
+import com.jmonad.seq.lambda.BinaryFunction;
+import com.jmonad.seq.lambda.Function;
 
 public class Seq<T> implements Comparable<Seq<T>>, Iterable<T> {
   private List<T> list;

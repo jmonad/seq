@@ -1,1 +1,1 @@
-include ':jmonad'
+include ':seq'
