@@ -14,6 +14,6 @@ repositories {
 }
 
 dependencies {
-  compile 'com.github.jmonad:seq:0.1'
+  compile 'com.github.jmonad:seq:0.2'
 }
 ```
