@@ -23,7 +23,7 @@ repositories {
 }
 
 dependencies {
-  compile 'com.github.jmonad:seq:0.2'
+  compile 'com.github.jmonad:seq:0.2.1.0'
 }
 ```
 
