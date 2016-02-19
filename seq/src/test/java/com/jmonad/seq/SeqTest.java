@@ -1,5 +1,7 @@
 package com.jmonad.seq;
 
+//import com.jmonad.seq.lambda.Function;
+//import java.util.ArrayList;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -49,6 +51,21 @@ public class SeqTest {
   //      + " nanosecond(s), Result two:"
   //      + durationSecond
   //      + "milisecond(s)");
+  //}
+
+  //@Test public void filterTest() {
+  //
+  //  Integer[] integers = { 1, 10, 100, 1000 };
+  //
+  //  Function func = new Function<Boolean, Integer>() {
+  //    @Override public Boolean call(Integer value) {
+  //      return value > 1 && value < 1000;
+  //    }
+  //  };
+  //
+  //  Seq<Integer> values = new Seq<Integer>(integers).filter(func);
+  //  slf4jLogger.info("values " + values.toArrayList());
+  //
   //}
 
 }
