@@ -7,8 +7,8 @@ Test
 
 The configuration of system that execute the tests are:
 
-(1) = Intel Core i7 4790K @ 4.4GHz, 16Gb DDR3 2400Mhz CL9
-(2) = MacBook Air Intel Core i5-5250U @ 2,7GHz, 4Gb LPDDR3 1600MHz
+* (1) = Intel Core i7 4790K @ 4.4GHz, 16Gb DDR3 2400Mhz CL9
+* (2) = MacBook Air Intel Core i5-5250U @ 2,7GHz, 4Gb LPDDR3 1600MHz
 
 ###map(Function<Ret, T>)
 
@@ -19,7 +19,7 @@ values(range between 0...1000000) * 2, it takes 15.805456 millisecond to execute
 
 ###filter(Function<Boolean, T> fn)
 
-The filter takes 0.022 milliseconds to run on device(2) the filter a small array, values { 1, 10, 100, 1000 }
+The filter takes 0.022 milliseconds to run on device (2) the filter a small array, values { 1, 10, 100, 1000 }
 
 Sample
 ------
