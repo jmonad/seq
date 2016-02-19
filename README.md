@@ -21,7 +21,7 @@ values(range between 0...1000000) * 2, it takes 15.805456 millisecond to execute
 
 ###filter
 
-The filter takes 0.022 milliseconds to run on device (2) the filter a small array, values { 1, 10, 100, 1000 }
+The filter takes 0.022 milliseconds to run on device (2) to filter a small array, values { 1, 10, 100, 1000 }
 
 Sample
 ------
