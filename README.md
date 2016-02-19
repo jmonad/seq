@@ -9,6 +9,51 @@ Test
 
 Running a simple test, we could analysis the perfomance. It was great! Multiplying values(range between 0...1000000) * 2, it takes 15.805456 miliseconds to execute the test on a Intel Core i7 4790K @ 4.4GHz, 16Gb DDR3 2400Mhz CL9. Running on Macbook Air Intel Core i5-5250U @ 2,7GHz, 4Gb LPDDR3 1600MHz, it takes 414.887893 miliseconds! Almost 28 times slower than the i7.
 
+Sample
+------
+
+With Java <= 7:
+
+```java
+public class Foo {
+
+  public Integer[] run() {
+    
+    Integer[] integers = {1,10,100};
+    
+    Function func = new Function<Integer, Integer>() {
+      @Override public Integer call(Integer x) {
+        return x * 2;
+      }
+    };
+    
+    Seq<Integer> values = new Seq<Integer>(integers).map(func);
+    
+    return values;
+  }
+
+}
+```
+
+With Java >= 8 or Retrolambda:
+
+```java
+public class Foo {
+
+  public Integer[] run() {
+    
+    Integer[] integers = {1,10,100};
+    
+    Seq<Integer> values = new Seq<Integer>(integers).map(x -> x * 2);
+    
+    return values;
+  }
+
+}
+```
+
+This code will return `{2,20,200}`.
+
 Import dependency
 --------------------------------
 
