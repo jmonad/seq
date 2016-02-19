@@ -7,7 +7,7 @@ Test
 
 `map(Function<Ret, T>)`
 
-Running a simple test, we could analysis the perfomance. It was great! Multiplying values(range between 0...1000000) * 2, it takes 15805456 nanoseconds to execute the test on a i7 4790K @ 4.4Ghz, 16Gb DDR3 2400Mhz.
+Running a simple test, we could analysis the perfomance. It was great! Multiplying values(range between 0...1000000) * 2, it takes 15.805456 miliseconds to execute the test on a i7 4790K @ 4.4Ghz, 16Gb DDR3 2400Mhz.
 
 Import dependency
 --------------------------------
