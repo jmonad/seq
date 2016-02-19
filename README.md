@@ -115,6 +115,8 @@ This code will return `{ 10, 100 }`.
 Import dependency
 --------------------------------
 
+Size of the library: `6kb`
+
 Into your build.gradle:
 
 ```groovy
