@@ -5,14 +5,26 @@
 Test
 ----
 
-`map(Function<Ret, T>)`
+The configuration of system that execute the tests are:
 
-Running a simple test, we could analysis the perfomance. It was great! Multiplying values(range between 0...1000000) * 2, it takes 15.805456 miliseconds to execute the test on a Intel Core i7 4790K @ 4.4GHz, 16Gb DDR3 2400Mhz CL9. Running on Macbook Air Intel Core i5-5250U @ 2,7GHz, 4Gb LPDDR3 1600MHz, it takes 414.887893 miliseconds! Almost 28 times slower than the i7.
+(1) = Intel Core i7 4790K @ 4.4GHz, 16Gb DDR3 2400Mhz CL9
+(2) = MacBook Air Intel Core i5-5250U @ 2,7GHz, 4Gb LPDDR3 1600MHz
+
+###map(Function<Ret, T>)
+
+Running a simple test, we could analysis the performance. It was great! Multiplying
+values(range between 0...1000000) * 2, it takes 15.805456 millisecond to execute the
+ test on the system (1). Running on device (2), it takes 414.887893 milliseconds!
+ Almost 28 times slower than the i7.
+
+###filter(Function<Boolean, T> fn)
+
+The filter takes 0.022 milliseconds to run on device(2) the filter a small array, values { 1, 10, 100, 1000 }
 
 Sample
 ------
 
-`map`
+###map
 
 With Java <= 7:
 
@@ -56,7 +68,7 @@ public class Foo {
 
 This code will return `{ 2, 20, 200 }`.
 
-`filter`
+###filter
 
 If you need to filter something on your list, you simple can do this:
 
