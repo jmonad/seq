@@ -1,7 +1,7 @@
 # Seq
 
 [![Build Status](https://travis-ci.org/jmonad/seq.svg?branch=master)](https://travis-ci.org/jmonad/seq)
-[![JitPack](https://img.shields.io/github/release/jmonad/seq.svg)](https://jitpack.io/#jmonad/seq)
+[![JitPack](https://img.shields.io/badge/Jitpack-0.2.1.0-blue.svg)](https://jitpack.io/#jmonad/seq)
 [![Size of the library](https://img.shields.io/badge/Methods and size-48 | 6 KB-e91e63.svg)](http://www.methodscount.com/?lib=com.github.jmonad%3Aseq%3A0.2.1.0)
 
 Test
