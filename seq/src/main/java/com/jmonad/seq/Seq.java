@@ -10,24 +10,54 @@ import java.util.Iterator;
 import java.util.List;
 
 public class Seq<T> implements Comparable<Seq<T>>, Iterable<T> {
-  private List<T> list;
+  protected List<T> list;
 
+  /**
+   * DEPRECATED if initializing with a list of Params use one the implementations.
+   * @param params The Params to initialize a List
+   * @see ArraySeq
+   * @see LinkedSeq
+   */
   @SafeVarargs
+  @Deprecated
   public Seq(T... params) {
     this.list = new ArrayList<>(params.length);
-    Collections.addAll(this.list, params);
+    this.addAll(params);
   }
 
+  /**
+   * DEPRECATED if initializing with a list of Params use one the implementations.
+   * @param list A list to initialize internal list.
+   * @see ArraySeq
+   * @see LinkedSeq
+   */
+  @Deprecated
   public Seq(List<T> list) {
     this.list = list;
   }
 
+  /**
+   * Add item to list
+   * @param item The item to add
+   * @return true if the item has been added.
+   */
   public boolean add(T item) {
     return this.list.add(item);
   }
 
+  /**
+   * Adds all items in list to self.
+   *
+   * @param items A item list
+   * @return true if all items were added.
+   */
   public boolean addAll(List<T> items) {
     return this.list.addAll(items);
+  }
+
+  @SafeVarargs
+  public final boolean addAll(T... params) {
+    return Collections.addAll(this.list, params);
   }
 
   /**
