@@ -238,7 +238,18 @@ public class Seq<T> implements Comparable<Seq<T>>, Iterable<T> {
   public Seq<T> take(int amount) {
     if(amount <= 0) return new Seq<T>();
     if(amount > this.list.size()) return new Seq<T>(this.list);
-    return new Seq<T>(this.list.subList(0, amount));
+    return new Seq<T>(this.list.subList(0, amount - 1));
+  }
+
+  /**
+   * Remove the first n elements of the sequence
+   * @param amount
+   * @return Seq<T>
+   */
+  public Seq<T> drop(int amount) {
+    if(amount <= 0) return new Seq<T>(this.list);
+    if(amount > this.list.size()) return new Seq<T>();
+    return new Seq<T>(this.list.subList(amount - 1, this.list.size()));
   }
 
   /**
