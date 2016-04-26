@@ -8,15 +8,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+import java.util.LinkedList;
 
 public class Seq<T> implements Comparable<Seq<T>>, Iterable<T> {
   protected List<T> list;
 
   /**
-   * DEPRECATED if initializing with a list of Params use one the implementations.
+   * DEPRECATED: This is a unsafe way to create a Seq. Will be removed in the future.
    * @param params The Params to initialize a List
-   * @see ArraySeq
-   * @see LinkedSeq
    */
   @SafeVarargs
   @Deprecated
@@ -26,14 +25,12 @@ public class Seq<T> implements Comparable<Seq<T>>, Iterable<T> {
   }
 
   /**
-   * DEPRECATED if initializing with a list of Params use one the implementations.
+   * Creates a internal ArrayList and initialize it with the values of the argument list
    * @param list A list to initialize internal list.
-   * @see ArraySeq
-   * @see LinkedSeq
    */
-  @Deprecated
   public Seq(List<T> list) {
-    this.list = list;
+    this.list = new ArrayList<>(list.size());
+    this.list.addAll(list);
   }
 
   /**
@@ -366,6 +363,14 @@ public class Seq<T> implements Comparable<Seq<T>>, Iterable<T> {
    */
   public ArrayList<T> toArrayList() {
     return new ArrayList<>(this.list);
+  }
+
+  /**
+   * Returns a new LinkedList with the items of this Seq
+   * @return ArrayList<T> a new ArrayList with the items of this Seq
+   */
+  public LinkedList<T> toLinkedList() {
+    return new LinkedList<>(this.list);
   }
 
   @Override
