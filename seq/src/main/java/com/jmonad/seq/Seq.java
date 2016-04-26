@@ -231,6 +231,17 @@ public class Seq<T> implements Comparable<Seq<T>>, Iterable<T> {
   }
 
   /**
+   * Returns the first n elements of the sequence
+   * @param amount
+   * @return Seq<T>
+   */
+  public Seq<T> take(int amount) {
+    if(amount <= 0) return new Seq<T>();
+    if(amount > this.list.size()) return new Seq<T>(this.list);
+    return new Seq<T>(this.list.subList(0, amount));
+  }
+
+  /**
    * Takes a list of items, and using the binary function supplied, folds them
    * into a single value. Requires an initial value (the second argument),
    * which will be the starting point, and result in case of an empty list.
