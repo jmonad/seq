@@ -237,10 +237,10 @@ public class Seq<T> implements Comparable<Seq<T>>, Iterable<T> {
    */
   public Seq<T> take(int amount) {
     Seq<T> buffer = new Seq<T>();
-    if(amount <= 0) return buffer;
-    if(amount > this.list.size()) return new Seq<T>(this.list);
+    if (amount <= 0) return buffer;
+    if (amount > this.list.size()) return new Seq<T>(this.list);
 
-    for(int i = 0; i < amount; i++) buffer.add(this.list.get(i));
+    for (int i = 0; i < amount; i++) buffer.add(this.list.get(i));
     return buffer;
   }
 
@@ -251,10 +251,10 @@ public class Seq<T> implements Comparable<Seq<T>>, Iterable<T> {
    */
   public Seq<T> drop(int amount) {
     Seq<T> buffer = new Seq<T>();
-    if(amount <= 0) return new Seq<T>(this.list);
-    if(amount > this.list.size()) return buffer;
+    if (amount <= 0) return new Seq<T>(this.list);
+    if (amount > this.list.size()) return buffer;
 
-    for(int i = amount; i < this.list.size(); i++) buffer.add(this.list.get(i));
+    for (int i = amount; i < this.list.size(); i++) buffer.add(this.list.get(i));
     return buffer;
   }
 
