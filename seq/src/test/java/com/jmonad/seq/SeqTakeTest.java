@@ -5,7 +5,7 @@ import org.junit.Test;
 public class SeqTakeTest {
 
   private Integer[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-  private Seq<Integer> elements = new Seq<Integer>(numbers);
+  private Seq<Integer> elements = new Seq<>(numbers);
 
   @Test public void takeListElementsTest() {
     assert elements.take(5).toArrayList().toString().equals("[1, 2, 3, 4, 5]");
