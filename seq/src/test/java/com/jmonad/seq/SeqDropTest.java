@@ -5,7 +5,7 @@ import org.junit.Test;
 public class SeqDropTest {
 
   private Integer[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-  private Seq<Integer> elements = new Seq<Integer>(numbers);
+  private Seq<Integer> elements = new Seq<>(numbers);
 
   @Test public void dropListElementsTest() {
     assert elements.drop(5).toArrayList().toString().equals("[6, 7, 8, 9, 10]");
