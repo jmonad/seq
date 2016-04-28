@@ -271,6 +271,34 @@ public class Seq<T> implements Comparable<Seq<T>>, Iterable<T> {
   }
 
   /**
+   * Returns the first n elements of the sequence
+   * @param amount
+   * @return Seq<T>
+   */
+  public Seq<T> take(int amount) {
+    Seq<T> buffer = new Seq<>();
+    if (amount <= 0) return buffer;
+    if (amount > this.list.size()) return new Seq<>(this.list);
+
+    for (int i = 0; i < amount; i++) buffer.add(this.list.get(i));
+    return buffer;
+  }
+
+  /**
+   * Remove the first n elements of the sequence
+   * @param amount
+   * @return Seq<T>
+   */
+  public Seq<T> drop(int amount) {
+    Seq<T> buffer = new Seq<>();
+    if (amount <= 0) return new Seq<>(this.list);
+    if (amount > this.list.size()) return buffer;
+
+    for (int i = amount; i < this.list.size(); i++) buffer.add(this.list.get(i));
+    return buffer;
+  }
+
+  /**
    * Takes a list of items, and using the binary function supplied, folds them
    * into a single value. Requires an initial value (the second argument),
    * which will be the starting point, and result in case of an empty list.
