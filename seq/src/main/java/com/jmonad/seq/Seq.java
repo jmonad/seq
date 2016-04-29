@@ -84,6 +84,12 @@ public class Seq<T> implements Comparable<Seq<T>>, Iterable<T> {
     return buffer;
   }
 
+  /**
+   * Applies a boolean function to verify a case
+   * in a list.
+   * @param fn The function to apply
+   * @return boolean The result of the list verifying
+   */
   public boolean some(Function<Boolean, T> fn) {
     Seq<Boolean> buffer = new Seq<>();
     for(T item : this.list) {
