@@ -92,8 +92,8 @@ public class Seq<T> implements Comparable<Seq<T>>, Iterable<T> {
    */
   public boolean some(Function<Boolean, T> fn) {
     Seq<Boolean> buffer = new Seq<>();
-    for(T item : this.list) {
-      if(fn.call(item)) return true;
+    for (T item : this.list) {
+      if (fn.call(item)) return true;
     }
     return false;
   }
