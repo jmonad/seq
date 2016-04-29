@@ -84,6 +84,14 @@ public class Seq<T> implements Comparable<Seq<T>>, Iterable<T> {
     return buffer;
   }
 
+  public boolean some(Function<Boolean, T> fn) {
+    Seq<Boolean> buffer = new Seq<>();
+    for(T item : this.list) {
+      if(fn.call(item)) return true;
+    }
+    return false;
+  }
+
   /**
    * Returns a new list which contains only the truthy values of the inputted
    * list.
